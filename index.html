@@ -8,44 +8,52 @@
   <link rel="stylesheet" href="style.css">
   <!-- Google Sign-In API -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="422322522973-i17n57otq2a0p47nmg3snpas0ecjn36j.apps.googleusercontent.com">
 </head>
 <body>
   <header class="header">
     <div class="logo" id="logo">Vanhusk</div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#" id="features-link">Features</a></li>
-        <li><a href="#" id="tools-link">Tools</a></li>
-        <li><a href="#" id="dashboard-link">Dashboard</a></li>
-        <li><a href="#" id="contact-link">Contact</a></li>
+        <li><a href="features.html" id="features-link">Features</a></li>
+        <li><a href="tools.html" id="tools-link">Tools</a></li>
+        <li><a href="dashboard.html" id="dashboard-link">Dashboard</a></li>
+        <li><a href="contact.html" id="contact-link">Contact</a></li>
       </ul>
     </nav>
-    <a href="#" class="cta" id="get-started-btn">Get Started</a>
+    <a href="features.html" class="btn" id="explore-features-btn-header">Explore Features</a>
   </header>
 
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to Vanhusk</h1>
       <p>Defend, Detect, and Secure – Your Cybersecurity, Our Priority.</p>
-      <a href="#" class="btn" id="explore-features-btn">Explore Features</a>
+      <a href="features.html" class="btn" id="explore-features-btn-hero">Explore Features</a>
     </div>
   </section>
 
-  <section id="features" class="features">
-    <h2>Features</h2>
+  <section id="tools-section" class="features">
+    <h2>Explore Our Tools</h2>
     <div class="features-grid">
-      <div class="feature-card">
-        <h3>AI-Powered Tools</h3>
-        <p>Utilize state-of-the-art AI for text, image, and code generation.</p>
+      <div class="tool-card" id="phishing-simulator">
+        <h3>Phishing Simulator</h3>
+        <p>Test and improve your team’s awareness against phishing attacks.</p>
+        <a href="phishing-simulator.html" class="btn">Try Now</a>
       </div>
-      <div class="feature-card">
-        <h3>Custom Dashboard</h3>
-        <p>Access all tools in one intuitive interface.</p>
+      <div class="tool-card" id="code-analyzer">
+        <h3>Code Analyzer</h3>
+        <p>Analyze and secure your code with AI-powered insights.</p>
+        <a href="code-analyzer.html" class="btn">Analyze Code</a>
       </div>
-      <div class="feature-card">
-        <h3>Secure & Reliable</h3>
-        <p>Your data is safe with our secure infrastructure.</p>
+      <div class="tool-card" id="chatbot">
+        <h3>Chatbot</h3>
+        <p>Experience intelligent and secure conversations with our chatbot.</p>
+        <a href="chatbot.html" class="btn">Chat Now</a>
+      </div>
+      <div class="tool-card" id="website-scanner">
+        <h3>Website Scanner</h3>
+        <p>Scan your website for vulnerabilities and get actionable reports.</p>
+        <a href="website-scanner.html" class="btn">Scan Now</a>
       </div>
     </div>
   </section>
@@ -54,6 +62,21 @@
     <h2>Sign in with Google</h2>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
   </section>
+
+  <div id="chat-widget">
+    <div id="chat-header" onclick="toggleChat()">
+      Chat with us!
+    </div>
+    <div id="chat-body" style="display: none;">
+      <div id="chat-messages"></div>
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Type your message..."
+        onkeypress="handleInput(event)"
+      />
+    </div>
+   </div>
 
   <footer class="footer">
     <p>&copy; 2025 Vanhusk. All rights reserved.</p>
